@@ -1,0 +1,181 @@
+---
+import DiscordIcon from '../assets/icons/DiscordIcon.astro'
+import XIcon from '../assets/icons/XIcon.astro'
+import InstagramIcon from '../assets/icons/InstagramIcon.astro'
+import YouTubeIcon from '../assets/icons/YouTubeIcon.astro'
+import LinkedInIcon from '../assets/icons/LinkedInIcon.astro'
+---
+<footer class="flex justify-between px-4 items-center bg-[#070726] text-white">
+  <section class="flex items-center">
+      <img src="/EliteHosting.png" alt="The Logo of EliteHosting" width={100}>
+      <h1 class="text-6xl font-black">
+        Elite
+        <strong class="text-6xl font-black">
+          Hosting
+        </strong>
+      </h1>
+  </section>
+  <section>
+    <nav class="flex">
+      <article>
+        <h2 class="text-xl"><strong>HOSTINGS</strong></h2>
+        <ul class="flex-col mr-4">
+          <li>
+            <a href="/game-hosting">
+              Minecraft Server Hosting
+            </a>
+          </li>
+          <li>
+            <a href="/web-hosting">
+              Web Hosting
+            </a>
+          </li>
+          <li>
+            <a href="/web-design">
+              Diseño Web
+            </a>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h2 class="text-xl">
+          <strong>NOSOTROS</strong>
+        </h2>
+        <ul class="flex-col mr-4">
+          <li>
+            <a href="">
+              Acerca de nosotros
+            </a>
+          </li>
+          <li>
+            <a href="">
+              RSC
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Aviso legal
+            </a>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h2 class="text-xl">
+          <strong>SOPORTE</strong>
+        </h2>
+        <ul class="flex-col mr-4">
+          <li>
+            <a href="">
+              Crea un ticket
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Tutoriales
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Preguntas frecuentes (FAQ)
+            </a>
+          </li>
+        </ul>
+      </article>
+      <article>
+        <h2 class="text-xl">
+          <strong>ÁREA DE CLIENTE</strong>
+        </h2>
+        <ul class="flex-col mr-4">
+          <li>
+            <a href="">
+              Mi perfil
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Valoraciones
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Historial de compras
+            </a>
+          </li>
+          <li>
+            <a href="">
+              Preferencias
+            </a>
+          </li>
+        </ul>
+      </article>
+    </nav>
+  </section>
+  <section>
+    <article>
+      <p>© 2024 EliteHosting Servicio de Hostings eficiente y accesible.</p>
+    </article>
+    <article>
+      <ul>
+        <li>
+          <a href="https://discord.gg/qtXdxS3JHh">
+            <DiscordIcon/>
+          <a>
+        </li>
+        <li>
+          <a href="https://x.com/EliteStormPvP">
+            <XIcon/>
+          </a>
+        </li>
+        <li>
+          <a href="https://instagram.com/susarro72_">
+            <InstagramIcon/>
+          </a>
+        </li>
+        <li>
+          <a href="https://youtube/@RayoYTs">
+            <YouTubeIcon/>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.linkedin.com/in/susarrodev-undefined-48478b2a9/">
+            <LinkedInIcon/>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/susarroDEV">
+            <img src="/SusyLogo.png" alt="The official logo of susarroDEV" width="27">
+          </a>
+        </li>
+      </ul>
+    </article>
+  </section>
+</footer>
+
+<style>
+  /* Sombra interior */ 
+  h1 {
+  background-color: #26a1a5;
+  color: transparent;
+  text-shadow: 0px 2px 3px #007bff;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+          background-clip: text;
+  }
+  strong {
+  background-color: #e5ad01;
+  color: transparent;
+  text-shadow: 0px 2px 3px #ffae00;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+          background-clip: text;
+  }
+  li {
+    transition: all 0.3s ease-in-out;
+    border-bottom: 2px solid transparent;
+  }
+
+  li a:hover {
+    color: #2cf1f8;
+    border-bottom: 2px solid #2cf1f8;
+  }
+</style>
