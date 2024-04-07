@@ -19,9 +19,17 @@ const { title, description } : Props = Astro.props;
     <meta name="description" content={description}>
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head> 
-  <body class="absolute bg-[#06061a] bottom-0 left-0 right-0 top-0 bg-[linear-gradient(to_right,#4f4f4f2e_1px,transparent_1px),linear-gradient(to_bottom,#4f4f4f2e_1px,transparent_1px)] bg-[size:14px_24px]">
+  <body>
     <Header/>
     <slot/>
     <Footer/>
   </body>
 </html>
+
+<style>
+  body {
+    background-image: linear-gradient(to bottom, #174a4a, #003f49, #003346, #002641, #051937);
+    scrollbar-width: thin;
+    scrollbar-color: #003346 #051937;
+  }
+</style>

@@ -4,7 +4,7 @@ import HeaderButton from './HeaderButton.astro'
 import UserIcon from '../assets/icons/UserIcon.astro'
 ---
 
-<header class="flex justify-between px-4 items-center bg-[#070726]">
+<header class="flex w-full justify-between px-4 items-center">
   <div class="flex items-center">
     <img src="/EliteHosting.png" alt="The Logo of EliteHosting" width={100}>
     <h1 class="text-6xl font-black">
@@ -52,6 +52,22 @@ import UserIcon from '../assets/icons/UserIcon.astro'
 
 
 <style>
+  header {
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: #07072600;
+    animation: enhace-header 0.3s ease-in-out both;
+    animation-timeline: scroll(root block);
+  }
+
+  @keyframes enhace-header {
+    to {
+      background-color: #07072644;
+      backdrop-filter: blur(20px);
+    }
+  }
+
   /* Sombra interior */ 
   h1 {
   background-color: #26a1a5;
@@ -78,4 +94,5 @@ import UserIcon from '../assets/icons/UserIcon.astro'
     color: #2cf1f8;
     border-bottom: 2px solid #2cf1f8;
   }
+
 </style>
