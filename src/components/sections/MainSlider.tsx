@@ -1,10 +1,8 @@
 import { useState, useEffect } from 'react';
 
-import '../styles/MainSlider.css';
+import { hostingPlansMap } from '../../utils/consts/hostings';
 
-import { hostingPlansMap } from '../utils/const';
-
-export default function MainSlider() {
+export function MainSlider() {
   const [currentImg, setCurrentImg] = useState(1);
   const TOTAL_IMG = 6;
 
@@ -25,9 +23,9 @@ export default function MainSlider() {
 
   return (
     <>
-      <button onClick={handlePrev} className='absolute text-6xl text-white top-1/2 left-10'>⟨</button>
-      <button onClick={handleNext} className='absolute text-6xl text-white top-1/2 right-10'>⟩</button>
-      <section className='flex h-screen w-full'>
+      <button onClick={handlePrev} className='absolute text-6xl text-white top-1/2 left-10 z-10'>⟨</button>
+      <button onClick={handleNext} className='absolute text-6xl text-white top-1/2 right-10 z-10'>⟩</button>
+      <section className='flex h-screen w-full relative -z-10'>
         <article className='absolute text-white text-left text-pretty w-[550px] top-1/4 left-[10%]'>
           <h1 className='text-5xl font-black'>
             { currentImg === 1 ? hostingPlansMap.mcHosting.title : currentImg === 2 ? hostingPlansMap.webHosting.title : currentImg === 3 ? hostingPlansMap.dsHosting.title : currentImg === 4 ? hostingPlansMap.dtHosting.title : currentImg === 5 ? hostingPlansMap.vpsHosting.title : hostingPlansMap.gameHosting.title}
@@ -44,7 +42,7 @@ export default function MainSlider() {
             Ver planes disponibles →
           </a>
         </article>
-        <img src={`/slider/Slider${currentImg}.webp`} alt="Main Slider" className='w-screen' />
+        <img src={`/slider/Slider${currentImg}.webp`} alt="Main Slider" width="100%" height="100%"/> 
       </section>
     </>
   );

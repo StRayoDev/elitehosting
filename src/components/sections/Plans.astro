@@ -1,0 +1,39 @@
+---
+import PlanCard from "../PlanCard.astro";
+---
+
+<section class="container min-w-full bg-[#15151C] gap-8 mt-8 py-8 border-y-4 border-black">
+  <h1 class="text-5xl font-bold text-white">
+    Nuestros planes
+  </h1>
+  <section class="flex gap-10 flex-wrap">
+    <PlanCard
+      title="Web Hosting"
+      price="3.75€/GB"
+      description="Alta confiabilidad, rendimiento y escalabilidad para ejecutar cualquier tipo de proyecto."
+      icon="/plans/web-hosting.webp"
+    />
+    <PlanCard
+      title="Game Hosting"
+      price="2.50€/GB"
+      description="Nuestros servidores de juegos de alto rendimiento te ofrecerán la mejor experiencia de juego."
+      icon="/plans/game.webp"
+      popular
+    />
+    <PlanCard
+      title="Web Design"
+      price="Personalizado"
+      description="Nuestros servidores de juegos de alto rendimiento te ofrecerán la mejor experiencia de juego."
+      icon="/plans/web-design.webp"
+    />
+  </section>
+</section>
+
+<style>
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>

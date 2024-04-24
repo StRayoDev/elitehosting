@@ -1,0 +1,92 @@
+---
+import Image from "astro/components/Image.astro";
+import { reasons } from "../../utils/consts/reasons.ts";
+
+---
+
+<section class="main-container container bg-[#15151C] min-w-[90%] mt-20 p-10 rounded-lg border-4 border-black">
+  <h1 class="text-5xl font-bold text-neutral-100 mb-8">
+    ¿Por qué EliteHosting?
+  </h1>
+  <ul class="flex flex-wrap justify-evenly min-w-full px-32 mb-8">
+    {
+      Object.entries(reasons).map(([_, value], index) => (
+        <li class="container w-[220px] h-[200px] text-center text-xl gap-5">
+          <Image 
+            src={value.icon} 
+            alt={value.title}  
+            width={100} 
+            height={100}
+            class="reason-icon"
+          />
+          <h2 class="text-2xl text-neutral-100 font-semibold">
+            {value.title}
+          </h2>
+        </li>
+      ))
+    }
+  </ul>
+  <section class="flex">
+    <Image 
+      src="/EliteHosting.png" 
+      alt="EliteHosting"  
+      width={250} 
+      height={125}
+    />
+    <div class="container w-[500px] text-pretty text-start text-neutral-100">
+      <h2 class="text-4xl font-bold mb-3">
+        Alto rendimiento
+      </h2>
+      <p class="mb-3">
+        Para brindar una experiencia de calidad en todos nuestros servicios, incluso en nuestros planes de presupuesto, utilizamos hardware de alta gama en todos nuestros servidores.
+      </p>
+      <ul class=" reason-list">
+        <li>
+          <p>
+            Hardware de alto rendimiento
+          </p>
+        </li>
+        <li>
+          <p>
+            Red rápida
+          </p>
+        </li>
+        <li>
+          <p>
+            Sin sobreventa
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
+</section>
+
+<style>
+  .reason-list {
+    list-style-type: circle;
+    padding-left: 20px;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main-container {
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0);
+  }
+
+  .reason-icon {
+    filter: brightness(0.5);
+    transition: 
+      filter 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+  }
+
+  .reason-icon:hover {
+    filter: none;
+    transform: scale(1.2);
+  }
+
+</style>

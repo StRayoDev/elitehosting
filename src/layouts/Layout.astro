@@ -1,6 +1,6 @@
 ---
-import Header from '../components/Header.astro'
-import Footer from '../components/Footer.astro'
+import Header from '../components/sections/Header.astro'
+import Footer from '../components/sections/Footer.astro'
 
 interface Props {
   title: string;
@@ -29,7 +29,27 @@ const { title, description } : Props = Astro.props;
 <style>
   body {
     background-image: linear-gradient(to bottom, #174a4a, #003f49, #003346, #002641, #051937);
-    scrollbar-width: thin;
-    scrollbar-color: #003346 #051937;
+  }
+  html::-webkit-scrollbar {
+    width: 6px;
+  }
+  html::-webkit-scrollbar-thumb {
+    background-color: #DEFFFF;
+    border-radius: 10px;
+  }
+  html::-webkit-scrollbar-track {
+    background-color: #000c37;
+  }
+  html::-webkit-scrollbar-thumb:active {
+    background-color: #DEFFFF;
+  }
+  html::-webkit-scrollbar-corner {
+    background-color: #000c37;
+  }
+  @supports not selector(::-webkit-scrollbar) {
+    html {
+      scrollbar-width: thin;
+      scrollbar-color: #DEFFFF #000c37;
+    }
   }
 </style>
